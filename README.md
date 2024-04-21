@@ -1,6 +1,7 @@
 # Path Planner ROS Package
 
 The Path Planner ROS package provides algorithms for optimal path finding (A* and Dijkstra) on grid maps and Probabilistic Roadmap (PRM) models. It features gradient descent smoothing for paths and tools for analyzing graph connectivity.
+[![Path Planning Video](https://img.youtube.com/vi/uqt3r7womo0/0.jpg)](https://www.youtube.com/watch?v=uqt3r7womo0 "Click to Watch!")
 
 ## Installation
 
@@ -42,11 +43,11 @@ By setting `heuristic_weight` to zero, A* behaves similarly to Dijkstra’s algo
 
 #### Visualization of Algorithms
 Dijkstra’s algorithm explores a larger number of nodes (depicted in blue) compared to A*.
-**Dijkstra’s Algorithm**
+- **Dijkstra’s Algorithm**
 
 ![Dijkstra's Algorithm](results/dij.png)
 
-**A* Algorithm**
+- ** A* Algorithm **
 
 ![A* Algorithm](results/A.png)
 
@@ -54,10 +55,6 @@ Dijkstra’s algorithm explores a larger number of nodes (depicted in blue) comp
 ## Parameter Impact
 
 - **Node Density**: Increasing `prm_num_nodes` enhances connectivity. This is crucial in complex environments where a higher node density may facilitate finding viable paths.
-
-#### Visualizations of Node Density Impact
-
-** Comparison of Connectivity with Varying Node Counts**
 
 - **200 Nodes:** Shows limited connectivity.
   
@@ -70,8 +67,6 @@ Dijkstra’s algorithm explores a larger number of nodes (depicted in blue) comp
 ### Case Study: Maze Map
 
 Node density is crucial for pathfinding in complex terrains like mazes.
-
-**Pathfinding Success in a Maze**
 
 - **500 Nodes:** Insufficient for a viable path.
   
@@ -86,9 +81,6 @@ Node density is crucial for pathfinding in complex terrains like mazes.
 - **`alpha`**: Higher values keep the path close to the initial, rough path.
 - **`beta`**: Higher values result in a smoother, less angular path.
 
-#### Visualizations of Smoothing Effects
-
-**Impact of Smoothing Parameters**
 
 - **High Alpha (0.9, Beta 0.1)**: Maintains path fidelity.
 
@@ -102,4 +94,4 @@ Node density is crucial for pathfinding in complex terrains like mazes.
 
 Watch the [video demonstration](https://www.youtube.com/watch?v=uqt3r7womo0) to see the path planner in action across various tasks and maps. Highlights include connectivity analysis, dynamic adjustments to PRM node counts, and testing the A* algorithm with smoothing on different map types.
 
-[![Path Planning Video](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=uqt3r7womo0 "Click to Watch!")
+[![Path Planning Video](https://img.youtube.com/vi/uqt3r7womo0/0.jpg)](https://www.youtube.com/watch?v=uqt3r7womo0 "Click to Watch!")
