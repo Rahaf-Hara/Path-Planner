@@ -42,11 +42,11 @@ By setting `heuristic_weight` to zero, A* behaves similarly to Dijkstra’s algo
 
 #### Visualization of Algorithms
 Dijkstra’s algorithm explores a larger number of nodes (depicted in blue) compared to A*.
-**Figure 1: Dijkstra’s Algorithm**
+**Dijkstra’s Algorithm**
 
 ![Dijkstra's Algorithm](results/dij.png)
 
-**Figure 2: A* Algorithm**
+**A* Algorithm**
 
 ![A* Algorithm](results/A.png)
 
@@ -57,7 +57,7 @@ Dijkstra’s algorithm explores a larger number of nodes (depicted in blue) comp
 
 #### Visualizations of Node Density Impact
 
-**Figure 3: Comparison of Connectivity with Varying Node Counts**
+** Comparison of Connectivity with Varying Node Counts**
 
 - **200 Nodes:** Shows limited connectivity.
   
@@ -71,7 +71,7 @@ Dijkstra’s algorithm explores a larger number of nodes (depicted in blue) comp
 
 Node density is crucial for pathfinding in complex terrains like mazes.
 
-**Figure 4: Pathfinding Success in a Maze**
+**Pathfinding Success in a Maze**
 
 - **500 Nodes:** Insufficient for a viable path.
   
@@ -88,7 +88,7 @@ Node density is crucial for pathfinding in complex terrains like mazes.
 
 #### Visualizations of Smoothing Effects
 
-**Figure 5: Impact of Smoothing Parameters**
+**Impact of Smoothing Parameters**
 
 - **High Alpha (0.9, Beta 0.1)**: Maintains path fidelity.
 
