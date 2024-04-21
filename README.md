@@ -2,13 +2,6 @@
 
 The Path Planner ROS package provides algorithms for optimal path finding (A* and Dijkstra) on grid maps and Probabilistic Roadmap (PRM) models. It features gradient descent smoothing for paths and tools for analyzing graph connectivity.
 
-## Video Demonstration
-
-Watch the [video demonstration](https://www.youtube.com/watch?v=uqt3r7womo0) to see the path planner in action across various tasks and maps. Highlights include connectivity analysis, dynamic adjustments to PRM node counts, and testing the A* algorithm with smoothing on different map types.
-
-[![Path Planning Video](https://img.youtube.com/vi/uqt3r7womo0/0.jpg)](https://www.youtube.com/watch?v=uqt3r7womo0 "Click to Watch!")
-
-
 ## Installation
 
 Clone the repository into your catkin workspace:
@@ -53,7 +46,7 @@ Dijkstra’s algorithm explores a larger number of nodes (depicted in blue) comp
 
 ![Dijkstra's Algorithm](results/dij.png)
 
-- ** A\* Algorithm **
+- **A\* Algorithm**
 
 ![A* Algorithm](results/A.png)
 
@@ -95,4 +88,9 @@ Node density is crucial for pathfinding in complex terrains like mazes.
 - **High Beta (0.1, Alpha 0.9)**: Creates a smoother path.
 
   ![High Beta](results/beta.png)
+  
+## Video Demonstration
 
+Watch the [video demonstration](https://www.youtube.com/watch?v=uqt3r7womo0) to see the path planner in action across various tasks and maps. Highlights include connectivity analysis, dynamic adjustments to PRM node counts, and testing the A* algorithm with smoothing on different map types.
+
+[![Path Planning Video](https://img.youtube.com/vi/uqt3r7womo0/0.jpg)](https://www.youtube.com/watch?v=uqt3r7womo0 "Click to Watch!")
