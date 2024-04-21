@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>path_planner</name>
+  <version>0.0.0</version>
+  <description>ROS node for path planning</description>
+  <maintainer email="rahafy34@gmail.com">Rahaf Abu Hara</maintainer>
+  <author email="rahafy34@gmail.com">Rahaf Abu Hara</author>
+  <license>TODO</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <exec_depend>rospy</exec_depend>
+
+
+  <export>
+  </export>
+</package>

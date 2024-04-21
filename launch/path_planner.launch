@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  
+  <arg name="filename_image" value="$(find path_planner)/config/intel_map.jpg" />
+  <arg name="filename_yaml" value="$(find path_planner)/config/intel_map.yaml" />
+
+  <!-- <arg name="filename_image" value="$(find path_planner)/config/maze.png" />
+  <arg name="filename_yaml" value="$(find path_planner)/config/maze.yaml" /> -->
+
+  <node pkg="path_planner" type="path_planner_node.py" name="path_planner" output="screen">
+    
+    <!-- tunable parameters -->
+    <param name="heuristic_weight" type="double" value="1.0"/>
+    <param name="use_prm" type="bool" value="false"/>
+    <param name="grid_step_size" type="int" value="10"/>
+    <!-- <param name="grid_step_size" type="int" value="4"/> -->
+    <param name="prm_num_nodes" type="int" value="800"/>   
+    <param name="prm_max_edge_length" type="int" value="100"/>  
+    <param name="alpha" type="double" value="0.1"/>
+    <param name="beta" type="double" value="0.1"/> 
+    <param name="show_connectivity" type="bool" value="false"/>    
+    
+
+    <!-- grid resolution -->
+    <param name="filename" type="string" value="$(arg filename_image)"/>
+    <param name="map_resolution" type="double" value="0.01"/>
+
+
+    <!-- Initial start position and goal position. Subsequent goals set as rviz 2D Nav Goal clicks. -->
+    <!-- Good for intel_map environment -->
+    <param name="startx" type="double" value="50"/>
+    <param name="starty" type="double" value="300"/>
+    <param name="goalx" type="double" value="530"/>
+    <param name="goaly" type="double" value="210"/>
+
+    <!-- Good for maze environment -->
+<!--<param name="startx" type="double" value="50"/>
+    <param name="starty" type="double" value="50"/>
+    <param name="goalx" type="double" value="150"/>
+    <param name="goaly" type="double" value="150"/> -->
+
+  </node>
+
+  
+  <node pkg="map_server" type="map_server" name="map_server" required="true" args="$(arg filename_yaml)" />
+  <node pkg="rviz" type="rviz" name="rviz" required="true" args="-d $(find path_planner)/launch/planner_conf.rviz" />
+
+</launch>
